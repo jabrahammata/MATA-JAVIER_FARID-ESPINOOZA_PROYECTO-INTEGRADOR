@@ -1,10 +1,10 @@
-package dh.backend.clinicamvc.service.impl;
+package dh.backend.clinicamvc.impl;
 
 import dh.backend.clinicamvc.entity.Paciente;
 import dh.backend.clinicamvc.exception.BadRequestException;
 import dh.backend.clinicamvc.exception.ResourceNotFoundException;
 import dh.backend.clinicamvc.repository.IPacienteRepository;
-import dh.backend.clinicamvc.service.IPacienteService;
+import dh.backend.clinicamvc.IPacienteService;
 import io.micrometer.common.util.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class PacienteService implements IPacienteService {
 
     private static Logger LOGGER = LoggerFactory.getLogger(PacienteService.class);

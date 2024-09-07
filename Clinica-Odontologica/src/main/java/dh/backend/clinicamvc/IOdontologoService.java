@@ -1,4 +1,4 @@
-package dh.backend.clinicamvc.service;
+package dh.backend.clinicamvc;
 
 import dh.backend.clinicamvc.entity.Odontologo;
 import dh.backend.clinicamvc.entity.Paciente;

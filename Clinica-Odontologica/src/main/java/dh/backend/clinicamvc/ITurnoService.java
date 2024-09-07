@@ -1,4 +1,4 @@
-package dh.backend.clinicamvc.service;
+package dh.backend.clinicamvc;
 
 import dh.backend.clinicamvc.dto.request.TurnoRequestDto;
 import dh.backend.clinicamvc.dto.response.TurnoResponseDto;
