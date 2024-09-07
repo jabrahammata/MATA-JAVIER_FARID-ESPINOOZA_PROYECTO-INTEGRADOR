@@ -17,5 +17,31 @@ import java.util.Optional;
 @RequestMapping
 
 public class VistaController {
-    private
+    private IPacienteService pacienteService;
+    private IOdontologoService odontologoService;
+
+    public VistaController(IPacienteService pacienteService, IOdontologoService odontologoService) {
+        this.pacienteService = pacienteService;
+        this.odontologoService = odontologoService;
+    }
+
+    @GetMapping("/buscarPaciente")
+    public String buscarPacientePorId(Model model, @RequestParam Integer id) throws BadRequestException {
+        Optional<Paciente> pacienteOptional = pacienteService.buscarPacientePorId(id);
+        Paciente paciente = pacienteOptional.get();
+        model.addAttribute("especialidad", "Hola Paciente: ");
+        model.addAttribute("nombre", paciente.getNombre());
+        model.addAttribute("apellido", paciente.getApellido());
+        return "index";
+    }
+
+    @GetMapping("/buscarOdontologo")
+    public String buscarOdontologoPorId(Model model, @RequestParam Integer id){
+        Optional<Odontologo> odontologoOptional = odontologoService.buscarOdontologoPorId(id);
+        Odontologo odontologo = odontologoOptional.get();
+        model.addAttribute("especialidad", "Hola Odontologo: ");
+        model.addAttribute("nombre", odontologo.getNombre());
+        model.addAttribute("apellido", odontologo.getApellido());
+        return "index";
+    }
 }
