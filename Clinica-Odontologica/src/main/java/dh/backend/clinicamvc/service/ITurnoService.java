@@ -1,9 +1,9 @@
-package dh.backend.clinicamvc;
+package dh.backend.clinicamvc.service;
 
 import dh.backend.clinicamvc.dto.request.TurnoRequestDto;
 import dh.backend.clinicamvc.dto.response.TurnoResponseDto;
-import dh.backend.clinicamvc.entity.Turno;
 import dh.backend.clinicamvc.exception.BadRequestException;
+import dh.backend.clinicamvc.entity.Turno;
 import dh.backend.clinicamvc.exception.ResourceNotFoundException;
 
 import java.time.LocalDate;

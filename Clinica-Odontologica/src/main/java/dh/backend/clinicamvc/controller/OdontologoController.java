@@ -3,7 +3,7 @@ package dh.backend.clinicamvc.controller;
 import dh.backend.clinicamvc.entity.Odontologo;
 import dh.backend.clinicamvc.exception.BadRequestException;
 import dh.backend.clinicamvc.exception.ResourceNotFoundException;
-import dh.backend.clinicamvc.impl.OdontologoService;
+import dh.backend.clinicamvc.service.impl.OdontologoService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

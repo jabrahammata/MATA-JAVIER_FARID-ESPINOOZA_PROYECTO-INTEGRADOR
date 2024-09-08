@@ -1,4 +1,4 @@
-package dh.backend.clinicamvc.impl;
+package dh.backend.clinicamvc.service.impl;
 
 import dh.backend.clinicamvc.dto.request.TurnoRequestDto;
 import dh.backend.clinicamvc.dto.response.OdontologoResponseDto;
@@ -12,7 +12,7 @@ import dh.backend.clinicamvc.exception.ResourceNotFoundException;
 import dh.backend.clinicamvc.repository.IOdontologoRepository;
 import dh.backend.clinicamvc.repository.IPacienteRepository;
 import dh.backend.clinicamvc.repository.ITurnoRepository;
-import dh.backend.clinicamvc.ITurnoService;
+import dh.backend.clinicamvc.service.ITurnoService;
 import org.modelmapper.ModelMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

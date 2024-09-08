@@ -1,4 +1,4 @@
-package dh.backend.clinicamvc;
+package dh.backend.clinicamvc.service;
 
 import dh.backend.clinicamvc.entity.Paciente;
 import dh.backend.clinicamvc.exception.BadRequestException;

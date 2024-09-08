@@ -1,10 +1,10 @@
-package dh.backend.clinicamvc.impl;
+package dh.backend.clinicamvc.service.impl;
 
 import dh.backend.clinicamvc.entity.Odontologo;
 import dh.backend.clinicamvc.exception.BadRequestException;
 import dh.backend.clinicamvc.exception.ResourceNotFoundException;
 import dh.backend.clinicamvc.repository.IOdontologoRepository;
-import dh.backend.clinicamvc.IOdontologoService;
+import dh.backend.clinicamvc.service.IOdontologoService;
 import io.micrometer.common.util.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
