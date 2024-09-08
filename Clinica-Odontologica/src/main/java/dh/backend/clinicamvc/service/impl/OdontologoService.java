@@ -40,7 +40,12 @@ public class OdontologoService implements IOdontologoService {
         return odontologoRepository.findAll();
     }
 
-        @Override
+    @Override
+    public Optional<Odontologo> buscarOdontologoPorId(Integer id) {
+        return Optional.empty();
+    }
+
+    @Override
     public void actualizarOdontologo(Odontologo odontologo) {
         LOGGER.info("Actualizando odontólogo "+ odontologo);
         odontologoRepository.save(odontologo);}

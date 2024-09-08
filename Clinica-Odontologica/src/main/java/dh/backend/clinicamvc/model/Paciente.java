@@ -1,7 +1,6 @@
 package dh.backend.clinicamvc.model;
 
 import java.time.LocalDate;
-import java.time.localDate;
 
 public class Paciente {
     private Integer id;
