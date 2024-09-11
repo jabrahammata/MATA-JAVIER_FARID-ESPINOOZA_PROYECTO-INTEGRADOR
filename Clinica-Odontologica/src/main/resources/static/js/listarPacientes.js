@@ -1,22 +1,17 @@
 
-// Obtener la referencia a la tabla y al modal
 const tableBody = document.querySelector("#pacienteTable tbody");
 const editModal = new bootstrap.Modal(document.getElementById("editModal"));
 const editForm = document.getElementById("editForm");
 let currentPacienteId;
 let currentDomicilioId;
 
-// Función para obtener y mostrar los odontólogos
 function fetchPacientes() {
-  // listar los pacientes
   fetch(`paciente/buscartodos`)
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
-      // Limpiar el contenido actual de la tabla
       tableBody.innerHTML = "";
 
-      // Insertar los datos en la tabla
       data.forEach((paciente, index) => {
         const row = document.createElement("tr");
 
@@ -45,7 +40,6 @@ function fetchPacientes() {
     });
 }
 
-// Función para abrir el modal y cargar los datos del paciente
 editPaciente = function (
   id,
   apellido,
@@ -71,7 +65,6 @@ editPaciente = function (
   editModal.show();
 };
 
-// Función para editar un paciente
 editForm.addEventListener("submit", function (event) {
   event.preventDefault();
   const apellido = document.getElementById("editApellido").value;
@@ -83,7 +76,6 @@ editForm.addEventListener("submit", function (event) {
   const localidad = document.getElementById("editLocalidad").value;
   const provincia = document.getElementById("editProvincia").value;
 
-  //modificar un paciente
   fetch(`paciente/modificar`, {
     method: "PUT",
     headers: {
@@ -116,10 +108,8 @@ editForm.addEventListener("submit", function (event) {
     });
 });
 
-// Función para eliminar un paciente
 deletePaciente = function (id) {
   if (confirm("¿Está seguro de que desea eliminar este paciente?")) {
-    // eliminar el paciente
     fetch(`paciente/eliminar/${id}`, {
       method: "DELETE",
     })
@@ -135,5 +125,4 @@ deletePaciente = function (id) {
   }
 };
 
-// Llamar a la función para obtener y mostrar los odontólogos
 fetchPacientes();

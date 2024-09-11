@@ -12,7 +12,6 @@ form.addEventListener("submit", function (event) {
   const localidad = document.getElementById("localidad").value;
   const provincia = document.getElementById("provincia").value;
 
-  // llamando al endpoint de agregar
   const datosFormulario = {
     nombre,
     apellido,
@@ -37,7 +36,7 @@ form.addEventListener("submit", function (event) {
     .then((data) => {
       console.log(data);
       alert("Paciente agregado con éxito");
-      form.reset(); // Resetear el formulario
+      form.reset();
     })
     .catch((error) => {
       console.error("Error agregando paciente:", error);
